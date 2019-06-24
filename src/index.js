@@ -78,15 +78,6 @@ class Game extends React.Component {
         return null;
     }
 
-    checkWinner() {
-        const winner = this.calculateWinner();
-
-        this.setState({
-            winningLine: winner ? winner.slice(1) : [],
-        });
-
-    }
-
     handleClick(i) {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
